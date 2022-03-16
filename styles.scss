@@ -12,6 +12,7 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  outline: none;
 }
 
 a:link,
@@ -43,7 +44,6 @@ h4 {
 
   .container {
     display: flex;
-    align-items: baseline;
     max-width: 120rem;
     max-height: 80rem;
     overflow: hidden;
@@ -56,7 +56,8 @@ h4 {
       flex-direction: column;
       justify-content: space-between;
       width: 45rem;
-      background: url("/src/img/bg-img.jpg") right bottom no-repeat;
+
+      background: url("/src/img/bg-img.jpg") right no-repeat;
       background-size: cover;
       color: #fff;
 
@@ -64,9 +65,9 @@ h4 {
         width: 4rem;
         height: 4rem;
         &-text {
-          margin-top: 10rem;
+          margin-top: 17rem;
           padding: 2rem;
-          background-color: rgba(0, 0, 0, 0.6);
+          background-color: rgba(0, 0, 0, 0.5);
           text-align: center;
           color: #fff;
           font-size: 3rem;
@@ -89,6 +90,111 @@ h4 {
       display: flex;
       width: 75rem;
       flex-direction: column;
+      padding: 6rem 3rem;
+
+      .secondary-heading {
+        font-size: 2.4rem;
+        margin-bottom: 2.4rem;
+      }
+
+      .form {
+        font-family: inherit;
+        color: #000;
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        font-family: "Inter", sans-serif;
+        background-color: #eeeff7;
+        overflow: hidden;
+        border-radius: 7px;
+        padding: 3rem 2rem;
+        margin-bottom: 3rem;
+
+        &-left,
+        &-right {
+          border: none;
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+        }
+
+        &-group {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          font-size: 1.4rem;
+
+          label {
+            font-family: inherit;
+            color: inherit;
+            text-transform: uppercase;
+            font-weight: 600;
+          }
+
+          input {
+            font-family: inherit;
+            color: inherit;
+            padding: 1rem;
+            font-size: inherit;
+            border-radius: 3px;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+
+            &:active:invalid,
+            &:focus:invalid {
+              border-bottom: 2px solid orangered;
+            }
+
+            &:valid {
+              border-bottom: 2px solid #55c57a;
+            }
+          }
+        }
+      }
+
+      .btn-submit {
+        max-width: 20rem;
+        padding: 1.4rem 2rem;
+        border: 1px solid transparent;
+        color: #fff;
+        background: #55c57a;
+        font-size: 1.6rem;
+        font-weight: 600;
+        border-radius: 999px;
+        margin-bottom: 3rem;
+        cursor: pointer;
+        transition: all 0.2s ease-out;
+        transform: translateY(0);
+
+        &:hover,
+        &focus {
+          box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.15);
+          transform: translateY(-0.3rem);
+        }
+
+        &:active {
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+          transform: translateY(-0.1rem);
+        }
+      }
+
+      .already {
+        font-size: 1.6rem;
+        color: inherit;
+        font-weight: 600;
+
+        &-link {
+          color: inherit;
+          text-decoration: none;
+          color: #55c57a;
+          font-weight: inherit;
+
+          &:focus {
+            text-decoration: underline;
+          }
+        }
+      }
     }
   }
 }

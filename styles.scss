@@ -6,6 +6,16 @@ html {
   box-sizing: border-box;
 }
 
+::-moz-selection {
+  color: #fff;
+  background-color: #55c57a;
+}
+
+::selection {
+  color: #fff;
+  background-color: #55c57a;
+}
+
 *,
 *::before,
 *::after {

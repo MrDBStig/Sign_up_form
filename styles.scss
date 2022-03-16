@@ -1,3 +1,6 @@
+// FONT
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Nova+Round&family=Press+Start+2P&display=swap");
+
 html {
   font-size: 62.5%;
   box-sizing: border-box;
@@ -11,6 +14,11 @@ html {
   box-sizing: inherit;
 }
 
+a:link,
+a:visited {
+  color: #fff;
+}
+
 body {
   width: 100vw;
   height: 100vh;
@@ -18,8 +26,69 @@ body {
   align-items: center;
   justify-content: center;
   background-image: linear-gradient(215deg, #7ed56f, #28b485);
+  font-family: "Inter", sans-serif;
 }
 
-.container {
-  max-width: 120rem;
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Nova Round", cursive;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .container {
+    display: flex;
+    align-items: baseline;
+    max-width: 120rem;
+    max-height: 80rem;
+    overflow: hidden;
+    border-radius: 9px;
+    background-color: #fff;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+
+    .img-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 45rem;
+      background: url("/src/img/bg-img.jpg") right bottom no-repeat;
+      background-size: cover;
+      color: #fff;
+
+      .logo {
+        width: 4rem;
+        height: 4rem;
+        &-text {
+          margin-top: 10rem;
+          padding: 2rem;
+          background-color: rgba(0, 0, 0, 0.6);
+          text-align: center;
+          color: #fff;
+          font-size: 3rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
+        }
+      }
+
+      .author-photo {
+        color: inherit;
+        text-align: center;
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+      }
+    }
+
+    .form-section {
+      display: flex;
+      width: 75rem;
+      flex-direction: column;
+    }
+  }
 }
